@@ -76,7 +76,7 @@ Causal Learner integrates a function for generating simulated Bayesian network d
  ----- In accuracy: Adj_F1, Adj_precision, Adj_recall
  ----- In efficiency: running time, number of conditional independence tests
 
- 
+ *********************************************************************************************************
 For much more information on Causal Learner and how to use it, please view the manual documentation.
 
 
