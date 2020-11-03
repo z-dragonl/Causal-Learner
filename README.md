@@ -53,6 +53,7 @@ Causal Learner integrates a function for generating simulated Bayesian network d
  ************** Names of the 15 Markov blanket learning algorithms are as follows ****************
 
  ----- GS, IAMB, interIAMB, IAMBnPC, interIAMBnPC, FastIAMB, FBED,
+ 
  ----- MMMB, HITONMB, PCMB, IPCMB, MBOR, STMB, BAMB, EEMB, MBFS
 
 
@@ -60,6 +61,7 @@ Causal Learner integrates a function for generating simulated Bayesian network d
  ********* Metrics evaluating global causal structure learning algorithms are as follows ************
 
  ----- In accuracy: Ar_F1, Ar_precision, Ar_recall, SHD, Miss, Extra, Reverse
+ 
  ----- In efficiency: running time
 
 
@@ -67,6 +69,7 @@ Causal Learner integrates a function for generating simulated Bayesian network d
  ********* Metrics evaluating local causal structure learning algorithms are as follows ************
 
  ----- In accuracy: Ar_F1, Ar_precision, Ar_recall, SHD, Miss, Extra, Reverse, Undirected
+ 
  ----- In efficiency: running time, number of conditional independence tests
 
 
@@ -74,6 +77,7 @@ Causal Learner integrates a function for generating simulated Bayesian network d
  ************* Metrics evaluating Markov blanket learning algorithms are as follows ***************
 
  ----- In accuracy: Adj_F1, Adj_precision, Adj_recall
+ 
  ----- In efficiency: running time, number of conditional independence tests
 
  *********************************************************************************************************
