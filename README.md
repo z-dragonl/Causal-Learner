@@ -7,7 +7,7 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
  **********************************************************************
  ********** Names of the 31 Bayesian networks are as follows ********** 
    
- ----- Discrete Bayesian Networks
+ (1) Discrete Bayesian Networks
 
  Small Networks (<20 nodes)   asia, cancer, earthquake, sachs, survey
 
@@ -19,7 +19,7 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
 
  Massive Networks (>1000 nodes)   munin
 
- ----- Continues Bayesian Networks (Gaussian)
+ (2) Continues Bayesian Networks (Gaussian)
 
  Medium Networks (20–50 nodes) ecoli70, magic-niab
 
@@ -27,7 +27,7 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
 
  Very Large Networks (101–1000 nodes) arth150
 
- ----- Continues Bayesian Networks (Conditional Linear Gaussian)
+ (3) Continues Bayesian Networks (Conditional Linear Gaussian)
 
  Small Networks (<20 nodes) sangiovese
 
@@ -37,32 +37,32 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
  ********************************************************************
  ************ Names of the 26  algorithms are as follows ************ 
 
- ----- global causal structure learning: GSBN, GES, PC, MMHC, PCstable, F2SL_c, F2SL_s
+ (1) global causal structure learning: GSBN, GES, PC, MMHC, PCstable, F2SL_c, F2SL_s
 
- ----- local causal structure learning: PCD_by_PCD, MB_by_MB, CMB, LCS_FS
+ (2) local causal structure learning: PCD_by_PCD, MB_by_MB, CMB, LCS_FS
 
- ----- Markov blanket learning: GS, IAMB, interIAMB, IAMBnPC, interIAMBnPC, FastIAMB, FBED,
+ (3) Markov blanket learning: GS, IAMB, interIAMB, IAMBnPC, interIAMBnPC, FastIAMB, FBED,
        MMMB, HITONMB, PCMB, IPCMB, MBOR, STMB, BAMB, EEMB, MBFS
 
 
- *********************************************************************************************************
- ********* Metrics evaluating global causal structure learning algorithms are as follows ************
+ ***********************************************************************************
+ ********* Names of the 13 Metrics evaluating algorithms are as follows ************
 
+ (1) global causal structure learning:
+ 
  ----- In accuracy: Ar_F1, Ar_precision, Ar_recall, SHD, Miss, Extra, Reverse
  
  ----- In efficiency: running time
 
 
- *********************************************************************************************************
- ********* Metrics evaluating local causal structure learning algorithms are as follows ************
+ (2) local causal structure learning:
 
  ----- In accuracy: Ar_F1, Ar_precision, Ar_recall, SHD, Miss, Extra, Reverse, Undirected
  
  ----- In efficiency: running time, number of conditional independence tests
 
 
- *********************************************************************************************************
- ************* Metrics evaluating Markov blanket learning algorithms are as follows ***************
+ (3) Markov blanket learning:
 
  ----- In accuracy: Adj_F1, Adj_precision, Adj_recall
  
