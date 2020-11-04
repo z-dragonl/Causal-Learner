@@ -34,8 +34,8 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
  Medium Networks (20–50 nodes) mehra-original, mehra-complete
 
 
- ********************************************************************
- ************ Names of the 26  algorithms are as follows ************ 
+ ****************************************************************
+ ********** Names of the 26  algorithms are as follows ********** 
 
  (1) global causal structure learning: GSBN, GES, PC, MMHC, PCstable, F2SL_c, F2SL_s
 
@@ -45,8 +45,8 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
        MMMB, HITONMB, PCMB, IPCMB, MBOR, STMB, BAMB, EEMB, MBFS
 
 
- ***********************************************************************************
- ********* Names of the 13 Metrics evaluating algorithms are as follows ************
+ **********************************************************************************
+ ********** Names of the 13 Metrics evaluating algorithms are as follows **********
 
  (1) global causal structure learning:
  
