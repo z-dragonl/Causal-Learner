@@ -1,5 +1,4 @@
 # Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning
-
 # Overview
 
 Causal Learner is an easy-to-use open source toolbox for causal structure learning and Markov blanket (MB) learning, which makes research efforts on causal structure learning and MB learning much easier. Causal Learner integrates a function for generating simulated Bayesian network data, a set of state-of-the-art global causal structure learning algorithms, a set of state-of-the-art local causal structure learning algorithms, a set of state-of-the-art MB learning algorithms, and abundant functions for algorithm evaluation. The data generation part of Causal Learner is written in R language, and the rest of Causal Learner is written in MATLAB.
