@@ -42,7 +42,6 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
  ----- local causal structure learning: PCD_by_PCD, MB_by_MB, CMB, LCS_FS
 
  ----- Markov blanket learning: GS, IAMB, interIAMB, IAMBnPC, interIAMBnPC, FastIAMB, FBED,
- 
        MMMB, HITONMB, PCMB, IPCMB, MBOR, STMB, BAMB, EEMB, MBFS
 
 
