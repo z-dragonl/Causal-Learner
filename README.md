@@ -5,7 +5,7 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
 
 
  **********************************************************************
- ************ Names of the 31 networks are as follows ************ 
+ ********** Names of the 31 Bayesian networks are as follows ********** 
    
  ----- Discrete Bayesian Networks
 
@@ -34,24 +34,16 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
  Medium Networks (20–50 nodes) mehra-original, mehra-complete
 
 
- *********************************************************************************************************
- ************ Names of the 7 global causal structure learning algorithms are as follows ************ 
+ ********************************************************************
+ ************ Names of the 26  algorithms are as follows ************ 
 
- ----- GSBN, GES, PC, MMHC, PCstable, F2SL_c, F2SL_s
+ ----- global causal structure learning: GSBN, GES, PC, MMHC, PCstable, F2SL_c, F2SL_s
 
+ ----- local causal structure learning: PCD_by_PCD, MB_by_MB, CMB, LCS_FS
 
- *********************************************************************************************************
- ************ Names of the 4 local causal structure learning  algorithms are as follows ************* 
-
- ----- PCD_by_PCD, MB_by_MB, CMB, LCS_FS
-
-
- *********************************************************************************************************
- ************** Names of the 15 Markov blanket learning algorithms are as follows ****************
-
- ----- GS, IAMB, interIAMB, IAMBnPC, interIAMBnPC, FastIAMB, FBED,
+ ----- Markov blanket learning: GS, IAMB, interIAMB, IAMBnPC, interIAMBnPC, FastIAMB, FBED,
  
- ----- MMMB, HITONMB, PCMB, IPCMB, MBOR, STMB, BAMB, EEMB, MBFS
+       MMMB, HITONMB, PCMB, IPCMB, MBOR, STMB, BAMB, EEMB, MBFS
 
 
  *********************************************************************************************************
