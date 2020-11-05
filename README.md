@@ -69,7 +69,7 @@ Causal Learner is an easy-to-use open source toolbox for causal structure learni
  ----- In efficiency: running time, number of conditional independence tests
 
  *********************************************************************************************************
-For much more information on Causal Learner, please visit http://bigdata.ahu.edu.cn/causal_learner.
+For much more information on Causal Learner, please visit http://bigdata.ahu.edu.cn/causal-learner.
 
 
 
