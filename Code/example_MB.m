@@ -50,7 +50,7 @@ data_samples=5000;
 data_type='dis';     
 
 % Name of algorithm
-alg_name='MBFS';
+alg_name='HITONMB';
 
 % Significance level
 alpha=0.01;
