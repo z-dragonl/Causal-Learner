@@ -39,7 +39,7 @@ clear all
 clc
 close all
 
-
+ 
 % Name of data
 data_name='alarm';
 
