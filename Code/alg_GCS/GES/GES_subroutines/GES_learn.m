@@ -40,7 +40,7 @@ score = Score_G(X,G,score_func,parameters); % initialize the score
 G = PDAG2DAG(G);
 G = DAG2CPDAG(G); % transform the input DAG to a CPDAG
 
-%%  forward greedy search
+%  forward greedy search
 record_local_score=cell(1,N); % record the local score calculated each time. Thus when we transition to the second phase, many of the operators can be scored without an explicit call the the scoring function
 %record_local_score{trial}{j} record the local scores when Xj as a parent
 score_new=score;
@@ -115,7 +115,7 @@ while(1)
 end
 
 
-%% backward greedy search
+% backward greedy search
 count2=0;
 score_new=score;
 update2=[];
