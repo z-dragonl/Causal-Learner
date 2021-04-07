@@ -66,7 +66,7 @@ for alg_i=1:total_alg_num
         alg_name='interIAMBnPC';
     elseif alg_i==17
         alg_name='FastIAMB';
-    elseif alg_i==28
+    elseif alg_i==18
         alg_name='FBED';
         
     elseif alg_i==19
@@ -102,7 +102,7 @@ end
 
 % Identify the type of algorithm
 
-alg_index=strmatch(input_alg_name,total_alg);
+alg_index = find(strcmp(total_alg,input_alg_name)==1);
 
 isGCS=0;
 isLCS=0;
