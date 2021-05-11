@@ -73,7 +73,12 @@ References for citation:
 
 -Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning[J]. arXiv preprint arXiv:2103.06544, 2021.
 
--Kui Yu, Xianjie Guo, Lin Liu, Jiuyong Li, Hao Wang, Zhaolong Ling, and Xindong Wu. Causality-based Feature Selection: Methods and Evaluations. ACM Computing Surveys (CSUR) 53, no. 5 (2020): 1-36.
+@article{ling2021causal,
+  title={Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning},
+  author={Ling, Zhaolong and Yu, Kui and Zhang, Yiwen and Liu, Lin and Li, Jiuyong},
+  journal={arXiv preprint arXiv:2103.06544},
+  year={2021}
+}
 
 
 
