@@ -5,11 +5,9 @@ Causal Learner is a toolbox for learning causal structure and Markov blanket (MB
 
  *********************************************************************************************************
 If you find this code useful, please consider citing:
-```
-Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning[J]. arXiv preprint arXiv:2103.06544, 2021.
-```
 
-If you find this code useful, please consider citing:
+Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning[J]. arXiv preprint arXiv:2103.06544, 2021.
+
 ```
 @article{ling2021causal,
   title={Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning},
