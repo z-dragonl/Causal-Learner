@@ -16,7 +16,6 @@ Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A T
   year={2021}
 }
 ```
-
  **********************************************************************
  ********** Names of the 31 Bayesian networks are as follows ********** 
    
