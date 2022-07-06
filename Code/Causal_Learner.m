@@ -18,7 +18,7 @@ maxK=3;
 % Size array of each node
 ns=max(data);
 
-total_alg_num=27;
+total_alg_num=29;
 
 total_alg=cell(1,total_alg_num);
 
@@ -66,8 +66,11 @@ for alg_i=1:total_alg_num
         alg_name='interIAMBnPC';
     elseif alg_i==17
         alg_name='FastIAMB';
-    elseif alg_i==18
+    elseif alg_i==28
         alg_name='FBED';
+    elseif alg_i==29
+        alg_name='EAMB';
+        
         
     elseif alg_i==19
         alg_name='MMMB';
@@ -102,7 +105,7 @@ end
 
 % Identify the type of algorithm
 
-alg_index = find(strcmp(total_alg,input_alg_name)==1);
+alg_index=strmatch(input_alg_name,total_alg);
 
 isGCS=0;
 isLCS=0;
@@ -112,7 +115,7 @@ if alg_index<=7
     isGCS=1;
 elseif alg_index<=11
     isLCS=1;
-elseif alg_index<=27
+elseif alg_index<=29
     isMB=1;
 end
 
@@ -126,9 +129,7 @@ elseif isMB
 end
 
 
-if strcmp(data_type,'dis')
-    
-    % using G2 test
+if strcmp(data_type,'G2')
     algorithm=str2func(strcat(input_alg_name,'_G2'));
     
     if isGCS
@@ -139,14 +140,13 @@ if strcmp(data_type,'dis')
         [MB,test,time] = algorithm (data,target,alpha,ns,p,maxK);
     end
         
-elseif strcmp(data_type,'con')
+elseif strcmp(data_type,'Z')
     
     if strcmp(input_alg_name,'FastIAMB')||strcmp(input_alg_name,'MMHC')||strcmp(input_alg_name,'F2SL_s')
         fprintf('\nSorry, %s only supports discrete data.\n\n',input_alg_name);
         return;
     end
     
-    % using Fisher's Z test
     algorithm=str2func(strcat(input_alg_name,'_Z'));
     
     if isGCS
