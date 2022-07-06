@@ -129,7 +129,7 @@ elseif isMB
 end
 
 
-if strcmp(data_type,'G2')
+if strcmp(data_type,'dis')
     algorithm=str2func(strcat(input_alg_name,'_G2'));
     
     if isGCS
@@ -140,7 +140,7 @@ if strcmp(data_type,'G2')
         [MB,test,time] = algorithm (data,target,alpha,ns,p,maxK);
     end
         
-elseif strcmp(data_type,'Z')
+elseif strcmp(data_type,'con')
     
     if strcmp(input_alg_name,'FastIAMB')||strcmp(input_alg_name,'MMHC')||strcmp(input_alg_name,'F2SL_s')
         fprintf('\nSorry, %s only supports discrete data.\n\n',input_alg_name);
