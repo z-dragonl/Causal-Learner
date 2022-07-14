@@ -18,7 +18,7 @@ maxK=3;
 % Size array of each node
 ns=max(data);
 
-total_alg_num=29;
+total_alg_num=30;
 
 total_alg=cell(1,total_alg_num);
 
@@ -70,7 +70,7 @@ for alg_i=1:total_alg_num
         alg_name='FBED';
     elseif alg_i==29
         alg_name='EAMB';
-        
+      
         
     elseif alg_i==19
         alg_name='MMMB';
@@ -90,6 +90,9 @@ for alg_i=1:total_alg_num
         alg_name='EEMB';
     elseif alg_i==27
         alg_name='MBFS';
+    elseif alg_i==30
+        alg_name='CFS_MI';          
+        
     end
     
     total_alg{alg_i}=alg_name;
@@ -115,7 +118,7 @@ if alg_index<=7
     isGCS=1;
 elseif alg_index<=11
     isLCS=1;
-elseif alg_index<=29
+elseif alg_index<=30
     isMB=1;
 end
 
