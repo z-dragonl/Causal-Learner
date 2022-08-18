@@ -49,7 +49,7 @@ data_samples=5000;
 data_type='dis';    
 
 % Name of algorithm
-alg_name='CMB';
+alg_name='ELCS';
 
 % Significance level
 alpha=0.01;
