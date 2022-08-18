@@ -18,7 +18,7 @@ maxK=3;
 % Size array of each node
 ns=max(data);
 
-total_alg_num=30;
+total_alg_num=31;
 
 total_alg=cell(1,total_alg_num);
 
@@ -51,46 +51,50 @@ for alg_i=1:total_alg_num
         alg_name='CMB';
     elseif alg_i==11
         alg_name='LCS_FS';
+    elseif alg_i==12
+        alg_name='ELCS';
+    elseif alg_i==13
+        alg_name='PSL';        
         
     % Markov blanket learning       
     
-    elseif alg_i==12
-        alg_name='GS';
-    elseif alg_i==13
-        alg_name='IAMB';
     elseif alg_i==14
-        alg_name='interIAMB';
+        alg_name='GS';
     elseif alg_i==15
-        alg_name='IAMBnPC';
+        alg_name='IAMB';
     elseif alg_i==16
-        alg_name='interIAMBnPC';
+        alg_name='interIAMB';
     elseif alg_i==17
+        alg_name='IAMBnPC';
+    elseif alg_i==18
+        alg_name='interIAMBnPC';
+    elseif alg_i==19
         alg_name='FastIAMB';
-    elseif alg_i==28
+    elseif alg_i==20
         alg_name='FBED';
-    elseif alg_i==29
+    elseif alg_i==21
         alg_name='EAMB';
       
         
-    elseif alg_i==19
-        alg_name='MMMB';
-    elseif alg_i==20
-        alg_name='HITONMB';
-    elseif alg_i==21
-        alg_name='PCMB';
     elseif alg_i==22
-        alg_name='IPCMB';
+        alg_name='MMMB';
     elseif alg_i==23
-        alg_name='MBOR';
+        alg_name='HITONMB';
     elseif alg_i==24
-        alg_name='STMB';
+        alg_name='PCMB';
     elseif alg_i==25
-        alg_name='BAMB';
+        alg_name='IPCMB';
     elseif alg_i==26
-        alg_name='EEMB';
+        alg_name='MBOR';
     elseif alg_i==27
-        alg_name='MBFS';
+        alg_name='STMB';
+    elseif alg_i==28
+        alg_name='BAMB';
+    elseif alg_i==29
+        alg_name='EEMB';
     elseif alg_i==30
+        alg_name='MBFS';
+    elseif alg_i==31
         alg_name='CFS_MI';          
         
     end
@@ -116,9 +120,9 @@ isMB=0;
 
 if alg_index<=7
     isGCS=1;
-elseif alg_index<=11
+elseif alg_index<=13
     isLCS=1;
-elseif alg_index<=30
+elseif alg_index<=31
     isMB=1;
 end
 
