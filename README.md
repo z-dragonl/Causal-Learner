@@ -2,14 +2,16 @@
 
 If you find this toolbox useful, please consider citing:
 
-Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning[J]. arXiv preprint arXiv:2103.06544, 2021.
+Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning[J]. Pattern Recognition Letters (2022), DOI: 10.1016/j.patrec.2022.09.021.
 
 ```
-@article{ling2021causal,
+@article{ling2022causal,
   title={Causal Learner: A Toolbox for Causal Structure and Markov Blanket Learning},
   author={Ling, Zhaolong and Yu, Kui and Zhang, Yiwen and Liu, Lin and Li, Jiuyong},
-  journal={arXiv preprint arXiv:2103.06544},
-  year={2021}
+  journal={Pattern Recognition Letters},
+  year={2022},
+  pages={DOI: 10.1016/j.patrec.2022.09.021},
+  publisher={Elsevier}
 }
 ```
  **********************************************************************
