@@ -2,7 +2,6 @@
 
 Causal Learner is a toolbox for learning causal structure and Markov blanket (MB) from data. It integrates functions for generating simulated Bayesian network data, a set of state-of-the-art global causal structure learning algorithms, a set of state-of-the-art local causal structure learning algorithms, a set of state-of-the-art MB learning algorithms, and functions for evaluating algorithms. The data generation part of Causal Learner is written in R, and the rest of Causal Learner is written in MATLAB. Causal Learner aims to provide researchers and practitioners with an open-source platform for causal learning from data and for the development and evaluation of new causal learning algorithms. For a detailed introduction to the Causal Learner project, please visit https://z-dragonl.github.io/causal-learner.
 
-```
  **********************************************************************
 
 If you find this toolbox useful, please consider citing:
@@ -19,4 +18,4 @@ Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A T
   year = {2022},
   issn = {0167-8655},
 }
-
+```
