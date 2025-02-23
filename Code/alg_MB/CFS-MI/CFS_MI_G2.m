@@ -1,19 +1,19 @@
-
+  
 function   [mb,ntest,time]=CFS_MI_G2(Data,target,alpha,ns,p,k)
 start=tic;
 ntest=0;
 mb=[];
 % time=0;
-% ÇóPC
+% æ±‚PC
 % pc = yingshe2(pc,target)
 %ntest=ntest+ntest1;
 train_data=Data(:,mysetdiff(1:p,target));
 featureMatrix = train_data;
-% ±êÇ©£¬ÕâÀï¾ÍÊÇtargetÕâÁĞµÄÊı¾İ
+% æ ‡ç­¾ï¼Œè¿™é‡Œå°±æ˜¯targetè¿™åˆ—çš„æ•°æ®
 train_label=Data(:,target);
 classColumn = train_label;
 numFeatures = size(featureMatrix,2);
-% classScore¹¹ÔìÒ»¸öÈ«ÁãµÄ¾ØÕóÓĞnumFeaturesĞĞ£¬Ò»ÁĞ
+% classScoreæ„é€ ä¸€ä¸ªå…¨é›¶çš„çŸ©é˜µæœ‰numFeaturesè¡Œï¼Œä¸€åˆ—
 classScore = zeros(numFeatures,1);
 vis = zeros(p,1);
 for i = 1:numFeatures
@@ -21,22 +21,22 @@ for i = 1:numFeatures
 %     iXY(i) = mi(featureMatrix(:,i),classColumn);
     classScore(i) = SU(featureMatrix(:,i),classColumn);
 end
-% ÅÅĞò£¬1--ÁĞµÄÒâË¼£¬desend½µĞò£¬indexScoreÅÅĞòºóÔªËØÔÚÔ­¾ØÕóÖĞµÄÎ»ÖÃ
+% æ’åºï¼Œ1--åˆ—çš„æ„æ€ï¼Œdesendé™åºï¼ŒindexScoreæ’åºåå…ƒç´ åœ¨åŸçŸ©é˜µä¸­çš„ä½ç½®
 [classScore, indexScore] = sort(classScore,1,'descend');
 % [iXY, iXYzhi] = sort(iXY,1,'descend');
 
 % th2 = 0.0001;
-% Õâ¸öÖµÓÃÀ´¿ØÖÆ½øÈ¥CPCµÄÊıÁ¿£¬Ô½Ğ¡½øÈ¥µÄÔ½¶à
+% è¿™ä¸ªå€¼ç”¨æ¥æ§åˆ¶è¿›å»CPCçš„æ•°é‡ï¼Œè¶Šå°è¿›å»çš„è¶Šå¤š
 threshold = 0.05;
 
 
 th3 = 0.15;
 t = indexScore(classScore < threshold);
 u = classScore(classScore < threshold);
-% ¸üĞÂÁ½¸ö¾ØÕó£¬±£ÁôclassScore>threholdµÄÔªËØ
+% æ›´æ–°ä¸¤ä¸ªçŸ©é˜µï¼Œä¿ç•™classScore>threholdçš„å…ƒç´ 
 indexScore = indexScore(classScore > threshold);
 classScore = classScore(classScore > threshold);
-% ÅĞ¶Ï¸üĞÂºóµÄ¾ØÕóÊÇ·ñÎª¿Õ£¬Îª¿ÕÖ±½Ó½áÊøº¯Êı£¬Ñ¡ÔñµÄPCÒ²¾ÍÊÇ¿Õ£¬²»¿ÕµÄ»°ÉèÖÃÒ»¸öµ±Ç°Î»ÖÃ±äÁ¿Îª1£¬½ÓÏÂÀ´ÓÃÕâ¸ö±äÁ¿×÷ÎªÑ­»·¿ØÖÆ±äÁ¿
+% åˆ¤æ–­æ›´æ–°åçš„çŸ©é˜µæ˜¯å¦ä¸ºç©ºï¼Œä¸ºç©ºç›´æ¥ç»“æŸå‡½æ•°ï¼Œé€‰æ‹©çš„PCä¹Ÿå°±æ˜¯ç©ºï¼Œä¸ç©ºçš„è¯è®¾ç½®ä¸€ä¸ªå½“å‰ä½ç½®å˜é‡ä¸º1ï¼Œæ¥ä¸‹æ¥ç”¨è¿™ä¸ªå˜é‡ä½œä¸ºå¾ªç¯æ§åˆ¶å˜é‡
 if ~isempty(indexScore)
     curPosition = 1;
 else
@@ -44,20 +44,20 @@ else
     selectedFeatures=[];
     return;
 end
-% Ñ­»·¿ªÊ¼   
+% å¾ªç¯å¼€å§‹   
 
 mii = -1;
 while curPosition <= length(indexScore)
     mb_tmp = [];
     j = curPosition + 1;
-    % curFeatureµ±Ç°ÅÅÔÚ×îÇ°ÃæµÄÒ»¸öµã
+    % curFeatureå½“å‰æ’åœ¨æœ€å‰é¢çš„ä¸€ä¸ªç‚¹
     curFeature = indexScore(curPosition);
     while j <= length(indexScore)
         
-        % ¼ÆËãXYÖ®¼äµÄSU
+        % è®¡ç®—XYä¹‹é—´çš„SU
         scoreij = SU(featureMatrix(:,curFeature),featureMatrix(:,indexScore(j)));
         ntest=ntest+1;
-        % Èç¹ûXYÖ®¼äµÄSU±ÈYºÍTÖ®¼äµÄSUÒª´ó£¬Y¾Í¿ÉÒÔÉ¾³ıÁË£¬Õâ¸öÖ¤Ã÷ÁËµÄ
+        % å¦‚æœXYä¹‹é—´çš„SUæ¯”Yå’ŒTä¹‹é—´çš„SUè¦å¤§ï¼ŒYå°±å¯ä»¥åˆ é™¤äº†ï¼Œè¿™ä¸ªè¯æ˜äº†çš„
         if scoreij > classScore(j)
             indexScore(j) = [];
             classScore(j) = [];
@@ -76,7 +76,7 @@ mb = yingshe2(pc,target);
 for i =1:length(selectedFeatures)
     vis(selectedFeatures(i))=1;
 end
-% ÅäÅ¼
+% é…å¶
 
 
 
@@ -97,7 +97,7 @@ for i=1:len1
 %         end
         scoreij = SU(featureMatrix(:,selectedFeatures(i)),featureMatrix(:,t(a)));   
         ntest=ntest+1;
-        % Õâ¸öÅĞ¶ÏÓÃÀ´¿ØÖÆÕæÕı½øÈ¥CPCµÄÊıÄ¿£¬ãĞÖµÔ½µÍ½øÈ¥µÄÔ½¶à£¬µ«ÊÇ½øÈ¥µÄ¶à¿ÉÄÜÓĞ´íÎó½Úµã
+        % è¿™ä¸ªåˆ¤æ–­ç”¨æ¥æ§åˆ¶çœŸæ­£è¿›å»CPCçš„æ•°ç›®ï¼Œé˜ˆå€¼è¶Šä½è¿›å»çš„è¶Šå¤šï¼Œä½†æ˜¯è¿›å»çš„å¤šå¯èƒ½æœ‰é”™è¯¯èŠ‚ç‚¹
         if scoreij > u(a)+ 0.13
 %             mb_tmp = myunion(mb_tmp,t(a));
             iXYZ = cmi(train_label,featureMatrix(:,t(a)),featureMatrix(:,selectedFeatures(i)));
@@ -135,8 +135,8 @@ end
 
 
 function pc = yingshe2( pc ,target)
-%YINGSHE2 ´Ë´¦ÏÔÊ¾ÓĞ¹Ø´Ëº¯ÊıµÄÕªÒª
-%   ´Ë´¦ÏÔÊ¾ÏêÏ¸ËµÃ÷
+%YINGSHE2 æ­¤å¤„æ˜¾ç¤ºæœ‰å…³æ­¤å‡½æ•°çš„æ‘˜è¦
+%   æ­¤å¤„æ˜¾ç¤ºè¯¦ç»†è¯´æ˜
 for i=1:length(pc)
     if pc(i)>=target
         pc(i)= pc(i)+1;
