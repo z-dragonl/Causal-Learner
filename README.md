@@ -20,8 +20,3 @@ Zhaolong Ling, Kui Yu, Yiwen Zhang, Lin Liu, and Jiuyong Li. Causal Learner: A T
   issn = {0167-8655},
 }
 
- ----- In efficiency: running time, number of conditional independence tests
-
-
-
-
